@@ -9,8 +9,11 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { Card } from "../ui/card";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const SalesBarChart = ({ data, title = "Sales by Region" }) => {
+  const { theme } = useTheme();
+
   const formatCurrency = (value) => {
     return new Intl.NumberFormat("en-US", {
       style: "currency",
@@ -23,9 +26,9 @@ const SalesBarChart = ({ data, title = "Sales by Region" }) => {
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white p-3 border border-gray-300 rounded-lg shadow-lg">
-          <p className="font-semibold text-gray-800">{`Region: ${label}`}</p>
-          <p className="text-blue-600">
+        <div className="bg-card p-3 border border-border rounded-lg shadow-lg">
+          <p className="font-semibold text-card-foreground">{`Region: ${label}`}</p>
+          <p className="text-primary">
             {`Sales: ${formatCurrency(payload[0].value)}`}
           </p>
           <p className="text-green-600">
@@ -40,30 +43,38 @@ const SalesBarChart = ({ data, title = "Sales by Region" }) => {
     return null;
   };
 
+  const axisColor = theme === "dark" ? "#4a5568" : "#e5e7eb";
+  const textColor = theme === "dark" ? "#e2e8f0" : "#374151";
+  const primaryColor = theme === "dark" ? "#60a5fa" : "#3b82f6";
+
   return (
     <Card className="p-6">
-      <h3 className="text-lg font-semibold mb-4 text-gray-800">{title}</h3>
+      <h3 className="text-lg font-semibold mb-4 text-foreground">{title}</h3>
       <div className="h-80">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
             margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
           >
-            <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              stroke={axisColor}
+              className="opacity-30"
+            />
             <XAxis
               dataKey="name"
-              tick={{ fontSize: 12 }}
-              axisLine={{ stroke: "#e5e7eb" }}
+              tick={{ fontSize: 12, fill: textColor }}
+              axisLine={{ stroke: axisColor }}
             />
             <YAxis
-              tick={{ fontSize: 12 }}
-              axisLine={{ stroke: "#e5e7eb" }}
+              tick={{ fontSize: 12, fill: textColor }}
+              axisLine={{ stroke: axisColor }}
               tickFormatter={formatCurrency}
             />
             <Tooltip content={<CustomTooltip />} />
             <Bar
               dataKey="sales"
-              fill="#3b82f6"
+              fill={primaryColor}
               radius={[4, 4, 0, 0]}
               className="hover:opacity-80 transition-opacity"
             />
