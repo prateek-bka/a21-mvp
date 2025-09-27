@@ -46,15 +46,19 @@
 
 <br />
 
-## 🎨 Screenshots
+## 🎨 Screenshots (Desktop and Mobile View)
 
 <div align="center">
 
-**Desktop Dashboard**
-<img width="100%" alt="Desktop Dashboard" src="https://ibb.co/gFM7N1V9" />
+### **Desktop Dashboard**
 
-**Mobile View**
-<img width="300" alt="Mobile Dashboard" src="https://ibb.co/ymw5NpYj" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/desktop-1.png" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/desktop-2.png" />
+
+### **Mobile View**
+
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/mobile-1.png" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/mobile-2.png" />
 
 </div>
 
@@ -215,7 +219,7 @@ Content-Type: multipart/form-data
 }
 ```
 
-<img width="100%" alt="Desktop Dashboard" src="https://ibb.co/nNx1CpXV" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/upload.PNG" />
 
 ### 📊 Get Data Summary & Analytics
 
@@ -256,7 +260,7 @@ GET /data-summary
 }
 ```
 
-<img width="100%" alt="Desktop Dashboard" src="https://ibb.co/0j7nHJQXV" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/data-summary.PNG" />
 
 ### 🔍 Query CSV Data
 
@@ -327,7 +331,7 @@ GET /all-uploads
 }
 ```
 
-<img width="100%" alt="Desktop Dashboard" src="https://ibb.co/G38J5pSw" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/all-uploads.PNG" />
 
 ### 🚨 Error Response Format
 
@@ -349,7 +353,7 @@ All API endpoints use consistent error response structure:
 **Ready-to-use API testing collection with sample requests and responses**
 
 <div align="center">
-<img width="100%" alt="Postman Collection Overview" src="https://ibb.co/G38J5pSw" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/data-summary.PNG" />
 </div>
 
 ### 🚀 Quick Setup
@@ -454,9 +458,9 @@ All API endpoints use consistent error response structure:
 ### 📊 SigNoz APM - Application Performance Monitoring APM with Real Time Infrastructure Monitoring
 
 <div align="center">
-<img width="100%" alt="SigNoz APM Dashboard" src="https://ibb.co/hJ1dLXky" />
-<img width="100%" alt="SigNoz APM Dashboard" src="https://ibb.co/DfWKdNzP" />
-<img width="100%" alt="SigNoz APM Dashboard" src="https://ibb.co/7N4kqmnV" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/signoz-1.png" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/signoz-2.png" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/signoz-3.png" />
 </div>
 
 **Features:**
@@ -469,8 +473,8 @@ All API endpoints use consistent error response structure:
 ### 🛡️ Wazuh SIEM - Security Compliance & Monitoring
 
 <div align="center">
-<img width="100%" alt="Wazuh Security Dashboard" src="https://ibb.co/bMLcDYyV" />
-<img width="100%" alt="Wazuh Security Dashboard" src="https://ibb.co/BVjcKpjb" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/wazuh-1.png" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/wazuh-2.png" />
 </div>
 
 **Features:**
@@ -483,7 +487,7 @@ All API endpoints use consistent error response structure:
 ### 🔐 HashiCorp Vault - Secrets Management
 
 <div align="center">
-<img width="100%" alt="Wazuh Security Dashboard" src="https://ibb.co/9X2zkjb" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/vault-1.png" />
 </div>
 
 **Features:**
@@ -496,8 +500,7 @@ All API endpoints use consistent error response structure:
 ### 🧪 Cypress E2E Testing - End-to-End Test Automation
 
 <div align="center">
-<img width="100%" alt="Cypress E2E Testing Dashboard" src="https://ibb.co/ZRL4ts30" />
-<img width="100%" alt="Cypress Test Runner" src="https://docs.cypress.io/img/accessibility/get-started/cypress-accessibility-overview.png" />
+<img width="100%" alt="Desktop Dashboard" src="./client/public/image-assets/cypress-end-to-end-test.webp" />
 </div>
 
 **Features:**
