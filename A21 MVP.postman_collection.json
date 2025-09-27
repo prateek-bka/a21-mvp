@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "043e8c8e-1d89-4e80-aea9-03c7d5dd8ba5",
+		"name": "A21 MVP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26299658"
+	},
+	"item": [
+		{
+			"name": "GET All Upload Files",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ntwistUser\",\r\n    \"password\": \"ntwistUser\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/all-uploads",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"all-uploads"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response GET All Upload Files",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ntwistUser\",\r\n    \"password\": \"ntwistUser\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/all-uploads",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"all-uploads"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d6-K8LnzzHfsNRWl5LmUIsEGaEbMVs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 27 Sep 2025 06:10:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Uploaded CSV files retrieved successfully\",\n    \"files\": [\n        {\n            \"filename\": \"file-1758953362986-737864752.csv\",\n            \"size\": 749,\n            \"uploadedAt\": \"2025-09-27T06:09:22.988Z\",\n            \"modifiedAt\": \"2025-09-27T06:09:22.989Z\"\n        }\n    ],\n    \"count\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Upload CSV File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/PC/Downloads/industry.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Upload CSV File",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/PC/Downloads/industry.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "316"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13c-kpL/e05i4VIjsWJMuTWBrMwj3o4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 27 Sep 2025 06:09:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"CSV file uploaded and saved successfully\",\n    \"file\": {\n        \"originalName\": \"industry.csv\",\n        \"savedAs\": \"file-1758953362986-737864752.csv\",\n        \"path\": \"C:\\\\Users\\\\PC\\\\Music\\\\a21-mvp\\\\server\\\\uploads\\\\file-1758953362986-737864752.csv\",\n        \"size\": 749,\n        \"rowCount\": 43,\n        \"headers\": [\n            \"Industry\"\n        ]\n    },\n    \"uploadedAt\": \"2025-09-27T06:09:23.008Z\"\n}"
+				}
+			]
+		}
+	]
+}
